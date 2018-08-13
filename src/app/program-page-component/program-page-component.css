@@ -1,0 +1,146 @@
+/*-- events --*/
+.events{
+    padding:  150px 0 50px 0;
+	position:relative;
+	z-index: 1;
+}
+.events:after{
+	content: '';
+    background: url(/assets/14.jpg) no-repeat 0px 0px;
+    display: block;
+    width: 400px;
+    height: 197px;
+    position: absolute;
+    right: 0%;
+    top: 0%;
+    z-index: -1;
+}
+.eventsTitle {
+    text-align: center;
+    text-transform: capitalize;
+    color: #212121;
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    line-height: 1.5em;
+    margin: 0 0 30px 0;
+}
+.eventList{
+	width:45%;
+	margin:0 auto;
+	position:relative;
+}
+.eventStep1{
+	position: absolute;
+    left: -57%;
+    top: 10%;
+    width: 70%;
+	border-bottom: 2px solid #fa3d03;
+}
+.eventStep{
+	position: absolute;
+    right: -57%;
+    top: 10%;
+    width: 70%;
+	border-bottom: 2px solid #65b126;
+}
+.eventInfo h4 {
+	font-size: 1.1em;
+    letter-spacing: 3px;
+    color: #212121;
+    text-transform: capitalize;
+    line-height: 1.5em;
+    font-weight: 600;
+    text-decoration: none;
+}
+.eventInfo h4 :focus{
+	outline:none;
+}
+.eventInfo h4 :hover{
+	color:#fa3d03;
+}
+.eventInfo h4{
+	margin:1em 0 0;
+}
+.eventInfo p{
+	color:#999;
+	line-height:2em;
+}
+.eventInfo{
+    padding: 2em;
+    background: #f5f5f5;
+}
+.eventInfo h5{
+	font-size: 1em;
+    color: #14a1ff;
+    font-weight: 600;
+    position: relative;
+    font-family: 'Open Sans', sans-serif;
+}
+.w3_agileits_event_head{
+	color:#65b126 !important;
+}
+.w3_agileits_event_head:after{
+	background:#65b126 !important;
+}
+.eventSocial{
+	position: absolute;
+    top: 0%;
+    background: #fee00c;
+    padding: 1em;
+}
+/*-- //events --*/
+
+
+@media(max-width: 767px) {
+.eventList {
+  width: 100%;    
+}
+.eventSocial {
+  right: -0%;   
+}
+.eventSocial1 {
+ left: -0%;   
+}
+.eventStep1,.eventStep {
+ position: relative;
+ top: 0;
+ width: 100%;
+ left: 0;   
+ }
+}
+@media(min-width: 768px) and (max-width: 992px) {
+.eventList {
+  width: 89%;    
+ }
+.eventSocial {
+  right: -0%;   
+ }
+.eventSocial1 {
+ left: -0%;   
+ }
+.eventStep1,.eventStep {
+ position: relative;
+ top: 0;
+ width: 100%;
+ left: 0;   
+ }
+.eventInfo h5:after {
+    content: '';
+    background: #14a1ff;
+    height: 2px;
+    width: 10%;
+    position: absolute;
+    top: 60%;
+    left: 5%;
+ }
+}
+@media(min-width: 992px) and (max-width: 1024px) { 
+.eventInfo {
+ padding: 5px 13px;   
+}
+.eventStep1,.eventStep {
+ top: 0;   
+}
+
+}

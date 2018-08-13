@@ -1,0 +1,118 @@
+<div class="contact">
+    <div class="container">
+      <h2>Conatct Us</h2>
+      <div class="col-md-6 col-sm-12 contact_form">
+          <form #funnyDayaForm ="ngForm" (ngSubmit) ="display(funnyDayaForm.value)">
+          <div class="form-group">
+            <input type="text" #nameRef="ngModel" required  pattern="^[a-zA-Z][a-zA-Z ]+" maxlength="10" minlength="4" class="form-control" placeholder="First Name" name="name" ngModel> 
+            <div *ngIf="nameRef.errors && (nameRef.dirty || nameRef.touched)" class="alert alert-danger">
+              <div [hidden]="!nameRef.errors.required">
+                First Name is required
+              </div>
+              <div [hidden]="!nameRef.errors.pattern">
+                Only alphabetsallowed
+              </div>
+              <div [hidden]="!nameRef.errors.minlength">
+                Please Enter Atleast 4 Characters
+              </div>
+              <div [hidden]="!nameRef.errors.maxlength">
+                Please Enter Atleast 10 Characters
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <input type="text" #lastRef="ngModel" required pattern="^[a-zA-Z][a-zA-Z ]+" maxlength="10" minlength="4" class="form-control" placeholder="Last Name" name="lastname" ngModel>
+            <div *ngIf="lastRef.errors && (lastRef.dirty || lastRef.touched)" class="alert alert-danger">
+              <div [hidden]="!lastRef.errors.required">
+                Last Name is required 
+              </div>
+              <div [hidden]="!lastRef.errors.pattern">
+                Only alphabetsallowed
+              </div>
+              <div [hidden]="!lastRef.errors.minlength">
+                Please Enter Atleast 4 Characters
+              </div>
+              <div [hidden]="!lastRef.errors.maxlength">
+                Please Enter Atleast 10 Characters
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <input type="text" #mobileRef="ngModel" required pattern="[0-9]*" maxlength="10" minlength="10" class="form-control" placeholder="Mobile Number" name="mobile" ngModel> 
+            <div *ngIf="mobileRef.errors && (mobileRef.dirty || mobileRef.touched)" class="alert alert-danger">
+              <div [hidden]="!mobileRef.errors.pattern">
+                Mobile numberr should be only numbers
+              </div>
+              <div [hidden]="!mobileRef.errors.maxlength">
+                Please Enter Atleast 10 Digit Number 
+              </div>
+              <div [hidden]="!mobileRef.errors.minlength">
+                Please Enter Atleast 10 Digit Number 
+              </div>
+              <div [hidden]="!mobileRef.errors.required">
+                Mobile is required 
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <input type="text" #emailRef="ngModel" required pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" class="form-control"  placeholder="Email" name="email" ngModel>
+            <div *ngIf="emailRef.errors && (emailRef.dirty || emailRef.touched)" class="alert alert-danger">
+              <div [hidden]="!emailRef.errors.required">
+                Email is required
+              </div>
+              <div [hidden]="!emailRef.errors.pattern">
+                Email format should be
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <textarea name="Message" placeholder="Message" required=""></textarea>
+          </div>
+          <button type="submit" [disabled]=!(funnyDayaForm.form.valid)>Submit</button>
+          </form>
+        </div>
+
+     <div class="col-md-6 col-sm-6 ">
+        <div class="col-md-12 col-sm-12 ">
+          <div class="col-md-4 col-sm-4 conatctAddressLeft">
+            <i class="fa fa-map-marker" aria-hidden="true"></i>
+          </div>
+          <div class="col-md-8 col-sm-8 conatctAddressRight">
+            <h3>Address</h3>
+            <p> We are located at 27 Earle Street, Doonside, NSW 2767</p>
+          </div>
+        </div>
+        <div class="col-md-12 col-sm-12 ">
+          <div class="col-md-4 col-sm-4 conatctAddressLeft1">
+            <i class="fa fa-mobile" aria-hidden="true"></i>       
+          </div>
+          <div class="col-md-8 col-sm-8 conatctAddressRight1">
+            <h3>Phone</h3>
+            <p> +(02) 0435816485 <br> +(02) 88096884 </p>
+          </div>
+        </div>
+        <div class=" col-md-12 col-sm-12 ">
+          <div class="col-md-4 col-sm-4 conatctAddressLeft2">
+            <i class="fa fa-envelope-o" aria-hidden="true"></i>
+          </div>
+          <div class="col-md-8 col-sm-8 conatctAddressRight2">
+            <h3>Email</h3>
+            <p> <a href="#">  kangaroochildcare@yahoo.com</a><br><a href="#">  kangaroochildcare@yahoo.com</a></p>
+          </div>
+        </div> 
+      </div>
+
+
+    </div>
+  </div>
+
+  <!--map start-->
+<div class="map">
+    <iframe  frameborder="0" scrolling="no" marginheight="0" marginwidth="0" height="400" width="100%"src="https://maps.google.com/maps?hl=en&q=eccentric infotech, baner-mahalunge road,baner&ie=UTF8&t=roadmap&z=14&iwloc=B&output=embed">
+      <div><small><a href="http://embedgooglemaps.com">
+        embedgooglemaps.com
+        </a></small>
+      </div>
+      <div><small><a href="googlemapsgenerator.com/">Google maps genhttps://ww.premiumlinkgenerator.com/erator</a></small></div>
+    </iframe>
+  </div>

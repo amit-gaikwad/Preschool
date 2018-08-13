@@ -1,0 +1,91 @@
+body{
+	padding:0;
+	margin:0;
+	background:#ccc;
+	position:relative;
+	font-family: 'Open Sans', sans-serif;
+}
+h1,h2,h3,h4,h5,h6{
+	margin:0;	
+	font-family: 'Open Sans', sans-serif;
+}	
+p {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 1px;
+  font-size: 1em;
+  color:black;
+  line-height: 1.9em;
+  }
+.services {
+ padding: 150px 0 50px 0;
+ background:#92CFF5;	
+}
+.servicesList,.servicesSupport,.serviceListInfo {
+ background: #eee;
+ padding:30px 20px;
+ border-radius: 10px;
+ margin: 0 0 30px 0;
+ display: inline-block;	
+}
+.services h2 {
+ color : #000;
+ font-size: 40px;
+ font-weight: 700;
+ text-align: center;
+ margin: 0  0 50px 0;
+}
+.supportImg img,.environmental img {
+ width: 100%;
+ height: auto;
+ border: 1px solid #ddd;
+ padding: 5px;
+}
+.servicesProgram h3,.supportStaff h3 {
+ color : #000;
+ font-size: 20px;
+ font-weight: 700;
+ margin: 0  0 15px 0;	
+}
+.servicesProgram p,.supportStaff p {
+ color: #000;
+ text-align: justify;
+ letter-spacing: 0;
+ font-size: 14px;
+ margin: 0 0 15px 0;	
+}
+.servicesProgram ul,.supportStaff ul {
+ margin: 0;
+ padding: 0;	
+}
+.servicesProgram li,.supportStaff li {
+ list-style: none;
+ padding: 0 0 15px 0;
+ font-size: 14px;
+ text-align: justify;
+ display: inline-flex;	
+}
+.servicesProgram i,.supportStaff i {
+ color:grey;
+ font-size: 16px;
+ margin: 0 10px 0 0;	
+}
+
+ @media(max-width: 768px) {
+.servicesPg {
+ padding: 0;	
+}
+.servicesList, .servicesSupport, 
+.serviceListInfo {
+ padding: 20px 10px;	
+}
+.servicesProgram li,
+.supportStaff li {
+ font-size: 13px;
+ }
+.supportImg img, 
+.environmental img {
+ margin: 0 0 20px 0;	
+ }
+
+}

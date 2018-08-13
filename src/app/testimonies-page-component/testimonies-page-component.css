@@ -1,0 +1,30 @@
+body{
+	padding:0;
+	margin:0;
+	background:#ccc;
+	position:relative;
+	font-family: 'Open Sans', sans-serif;
+}
+h1,h2,h3,h4,h5,h6{
+	margin:0;	
+	font-family: 'Open Sans', sans-serif;
+}	
+p {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 1px;
+  font-size: 1em;
+  color:black;
+  line-height: 1.9em;
+  }
+.testimonies {
+ padding: 150px 0 50px 0;
+ background:#92CFF5;	
+}
+.testimonies h2 {
+    color : #000;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0  0 50px 0;
+   }

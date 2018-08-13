@@ -1,0 +1,31 @@
+<!-- events -->
+<div id="events" class="events">
+		<div class="container">
+			<h2 class="eventsTitle">Our Program</h2> 
+			
+				<div *ngFor="let item of programSer ; let i = index" class="eventList">
+				
+                    <div *ngIf ='i % 2 === 0'>
+					<img [src] ='item.img' alt=" " class="img-responsive" />
+					 <div class="eventStep1 eventInfo">
+						<h5> {{ item.title}}</h5>
+						<h4>{{ item.subTitle}}</h4>
+						<p>{{ item.data}}
+						</p>
+					 </div>
+				  </div>
+				  <div *ngIf ='i%2 != 0'>
+						<img [src] ='item.img' alt=" " class="img-responsive" />
+						 <div class="eventStep eventInfo">
+							<h5> {{ item.title}}</h5>
+							<h4>{{ item.subTitle}}</h4>
+							<p>{{ item.data}}
+							</p>
+						 </div>
+					  </div>
+				</div>
+				
+			
+		</div>
+	</div>
+<!-- //events -->

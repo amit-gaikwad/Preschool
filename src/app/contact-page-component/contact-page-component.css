@@ -1,0 +1,130 @@
+body{
+	padding:0;
+	margin:0;
+	background:#ccc;
+	position:relative;
+	font-family: 'Open Sans', sans-serif;
+}
+h1,h2,h3,h4,h5,h6{
+	margin:0;	
+	font-family: 'Open Sans', sans-serif;
+}	
+p {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 1px;
+  font-size: 1em;
+  color:black;
+  line-height: 1.9em;
+  }
+.contact {
+    padding: 150px 0 0px 0;
+    background: #fdfdfd;
+  }
+  .contact h2 {
+    color: #000 ;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 50px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .contact_form input[type="text"] {
+    width: 100%;
+    color: black;
+    background: none;
+    outline: none;
+    font-size: 1em;
+    height: 45px;
+    border: 1px solid #ddd;
+    -webkit-appearance: none;
+    display: inline-block;
+  }
+    .contact_form textarea {
+    resize: none;
+    width: 100%;
+    background: none;
+    color: black;
+    font-size: 1em;
+    outline: none;
+    padding: .6em .8em;
+    border: 1px solid #ddd;
+    min-height: 10em;
+    -webkit-appearance: none;
+  }
+  .contact_form button[type="submit"] {
+    outline: none;
+    width: 100%;
+    color: #fff;
+    padding: 0.8em 4em;
+    font-size: 1em;
+    margin: 20px 0%;
+    -webkit-appearance: none;
+    background: #007bc4 ;
+    border: 2px solid #ffffff;
+    -webkit-transition: 0.5s all;
+    transition: 0.5s all;
+    -moz-transition: 0.5s all;
+  }
+  .form-group {
+    margin: 0 0 15px 0;
+  }  
+/* .contact_form input.ng-ivalid{
+  border-left: 5px solid red;
+}
+.contact_form input.ng-valid{
+  border-left: 5px solid green;
+} */
+.conatctAddress {
+  padding: 10px; 
+}
+.conatctAddressLeft,.conatctAddressLeft1,
+.conatctAddressLeft2 {
+  background: #d23100;
+  text-align: center;
+  min-height: 113px;
+}
+.conatctAddressLeft i,.conatctAddressLeft1 i,
+.conatctAddressLeft2 i {
+ color: #fff;
+ font-size: 40px;
+ font-weight: 700; 
+ line-height: 110px;
+}
+.conatctAddressRight,.conatctAddressRight1,
+.conatctAddressRight2 {
+  background: #fa3d03;
+  padding: 1em;
+  min-height: 110px;
+  margin: 0 0 60px 0;
+}
+.conatctAddressRight h3,.conatctAddressRight1 h3,
+.conatctAddressRight2 h3{
+  font-size: 1.5em;
+    color: #fee00c;
+    font-weight: 600;
+    letter-spacing: 3px;
+    margin: 0 0 10px 0;
+}
+.conatctAddressRight p,.conatctAddressRight1 p,
+.conatctAddressRight2 p{
+    color: #fff;
+    line-height: 2em;
+    font-size: 13px;
+}
+.conatctAddressRight2 a {
+ color:white; 
+ font-size: 13px;
+}
+.conatctAddressLeft1 {
+ background: #0094f7;
+}
+.conatctAddressLeft2 {
+ background: #56a119;
+}
+.conatctAddressRight1 {
+  background: #14a1ff; 
+}
+.conatctAddressRight2 {
+  background: #65b126; 
+}

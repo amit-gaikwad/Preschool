@@ -1,0 +1,74 @@
+body{
+	padding:0;
+	margin:0;
+	background:#ccc;
+	position:relative;
+	font-family: 'Open Sans', sans-serif;
+}
+h1,h2,h3,h4,h5,h6{
+	margin:0;	
+	font-family: 'Open Sans', sans-serif;
+}	
+p {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 1px;
+  font-size: 1em;
+  color:black;
+  line-height: 1.9em;
+  }
+
+.bs-example{
+    margin: 150px 0 50px 0;
+}
+.panel-title {
+   font-size: 15px; 
+   padding: 8px 0;
+   cursor: pointer;
+}
+.panel-default>.panel-heading {
+    background: #e3f005;
+    
+}
+.panel-body {
+  font-size: 13px;  
+}
+.panel-default {
+    border-color:  #e3f005; 
+}
+.panel-body ul {
+  margin: 0;
+  padding: 5px 0 5px 15px;
+}
+.panel-body ul li{
+ padding: 5px 0 5px 0;
+
+}    
+
+.panel-default>.panel-heading div:after {
+  content: "";
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  float: right;
+  transition: transform .25s linear;
+  -webkit-transition: -webkit-transform .25s linear;
+}
+
+.panel-default>.panel-heading div[aria-expanded="true"]:after {
+  content: "\2212";
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.panel-default>.panel-heading div[aria-expanded="false"]:after {
+  content: "\002b";
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
