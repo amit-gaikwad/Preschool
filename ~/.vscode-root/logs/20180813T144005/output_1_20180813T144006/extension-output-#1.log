@@ -730,3 +730,40 @@ Open repository: /home/rahuld/AngularTric _Workplace/Live-Projects/Preschool
 > git for-each-ref --format %(refname) %(objectname) --sort -committerdate
 > git remote --verbose
 > git show :src/app/services/youtube.service.ts
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse feature-youtube
+> git rev-parse --symbolic-full-name feature-youtube@{u}
+> git rev-list --left-right feature-youtube...refs/remotes/origin/feature-youtube
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse feature-youtube
+> git rev-parse --symbolic-full-name feature-youtube@{u}
+> git rev-list --left-right feature-youtube...refs/remotes/origin/feature-youtube
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse feature-youtube
+> git rev-parse --symbolic-full-name feature-youtube@{u}
+> git rev-list --left-right feature-youtube...refs/remotes/origin/feature-youtube
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse feature-youtube
+> git rev-parse --symbolic-full-name feature-youtube@{u}
+> git rev-list --left-right feature-youtube...refs/remotes/origin/feature-youtube
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse feature-youtube
+> git rev-parse --symbolic-full-name feature-youtube@{u}
+> git rev-list --left-right feature-youtube...refs/remotes/origin/feature-youtube
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :src/app/pipes/safe-youtube-url.pipe.ts
+> git show :src/app/services/youtube.service.ts

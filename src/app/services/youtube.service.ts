@@ -6,7 +6,9 @@ import { map } from 'rxjs/operators'
 
 @Injectable()
 export class YoutubeService {
-    youtubeUrl = "https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCeMSLh2vRcYgV_ahmgYWzRA&type=video&key=AIzaSyAcviOah4O8RZKGX_BgGQkALryXRqTl-JM";
+    apiKey = "AIzaSyAcviOah4O8RZKGX_BgGQkALryXRqTl-JM";
+    channelId = "UCeMSLh2vRcYgV_ahmgYWzRA";
+    youtubeUrl = "https://www.googleapis.com/youtube/v3/search?part=snippet&channelId="+this.channelId+"&order=date&type=video&key="+this.apiKey;
     
     youtubeData = [];
 
