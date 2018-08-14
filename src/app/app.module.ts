@@ -19,6 +19,9 @@ import { HttpModule } from '../../node_modules/@angular/http';
 import { ProgramServices } from './services/program-services';
 import { MyFormPageComponennt } from './form-page-component/form-page-component';
 import { MyTestimoniesPageComponent } from './testimonies-page-component/testimonies-page-component';
+import { FormService } from '../app/services/form-services';
+import { SafeUrlPipe } from './pipes/safe-url.pipe';
+
 
 
 const appRoutes: Routes = [
@@ -33,6 +36,7 @@ const appRoutes: Routes = [
   {path : 'form' , component : MyFormPageComponennt},
   {path : 'faq' , component : MyFaqPageComponent},
   {path : 'testimonies' , component : MyTestimoniesPageComponent},
+  
 
 ];
 
@@ -40,6 +44,7 @@ const appRoutes: Routes = [
 
 @NgModule({
   declarations: [
+    SafeUrlPipe,
     AppComponent, MyNavbarComponent, MyFooterComponent, MyHomePageComponent,
     MyAboutPageComponent, MyServicesPageComponent, MyGalleryPageComponent, MyContactPageComponent,
     MyVideoPageComponent, MyFaqPageComponent, MyProgramPageComponent, MyFormPageComponennt, MyTestimoniesPageComponent
@@ -47,7 +52,7 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule, FormsModule, HttpModule, RouterModule.forRoot(appRoutes)
   ],
-  providers: [ ProgramServices],
+  providers: [ ProgramServices,FormService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
