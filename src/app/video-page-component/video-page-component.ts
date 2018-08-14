@@ -12,13 +12,15 @@ export class MyVideoPageComponent {
     videoUrl = "https://www.youtube.com/embed/";
 
     constructor(private youtubeService : YoutubeService){
-        this.videos = youtubeService.getAll();
-        setTimeout(()=>{
-            this.videos = youtubeService.getAll();        
-        },2000);
+        youtubeService.getAll().subscribe((data)=>{
+            this.videos = data["items"];
+            this.videos = this.videos.map((item)=>{
+                return item.id.videoId;
+            });
+        });
     }
 
-    getVideoUrl( videoId : string) : any {debugger
+    getVideoUrl( videoId : string) : any {
         return this.videoUrl+""+videoId;
     }
     

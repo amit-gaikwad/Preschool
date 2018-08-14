@@ -15,18 +15,8 @@ export class YoutubeService {
     constructor(private http:Http){
     
     }
-                
-    getAll() : any[] {
-            this.getChannelData().subscribe((data)=>{
-                this.youtubeData = data["items"];
-                this.youtubeData = this.youtubeData.map((item)=>{
-                    return item.id.videoId;
-                });
-            });
-            return this.youtubeData;
-    }
-    
-    getChannelData() : Observable<any> {
+
+    getAll() : Observable<any> {
         return this.http.get(this.youtubeUrl).pipe(
             map((res:Response) => {
                 return res.json();
