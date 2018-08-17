@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { ProgramServices } from "../services/program-services";
+import { error } from "protractor";
 
 
 @Component({
@@ -9,10 +10,16 @@ import { ProgramServices } from "../services/program-services";
 })
 
 export class MyProgramPageComponent  {
-    programmes = [];
+   programmes = [];
     
     constructor(private programmeServices:ProgramServices){
-        this.programmes = programmeServices.getAll();
+        programmeServices.getAll().subscribe((data) => {
+            this.programmes = data;
+        });
+        
+        
+
+        
     }
     
 }

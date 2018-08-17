@@ -1,4 +1,4 @@
-import { Component } from "../../../node_modules/@angular/core";
+import { Component } from "@angular/core";
 import { ProgramServices } from "../services/program-services";
 
 @Component ({
@@ -9,8 +9,4 @@ import { ProgramServices } from "../services/program-services";
 })
 export class MyServicesPageComponent {
 
-
-    constructor(private programmeService:ProgramServices){
-
-    }
 }
