@@ -1,10 +1,10 @@
 <div class="video">
     <div class="container">
      <h2><span class="child">V</span><span class="child1">i</span><span class="child2">d</span><span class="child3">e</span><span class="child4">o</span></h2>
-     <div class="col-md-4 col-sm-4" *ngFor="let video of videos">
+     <div class="col-md-4 col-sm-4" *ngFor="let videoUrl of videoUrls">
       <div class="video-list"> 
        <div class="videoWrapper">
-        <iframe width="854" height="480" [src]="getVideoUrl(video) | safeYoutubeUrl"
+        <iframe width="854" height="480" [src]="videoUrl | safeYoutubeUrl"
          frameborder="0" 
          allow="autoplay; encrypted-media"
           allowfullscreen>

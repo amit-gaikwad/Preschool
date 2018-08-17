@@ -1,5 +1,6 @@
 import { Component } from "@angular/core";
 import{YoutubeService} from "../services/youtube.service"
+import {AppConstants} from "../constants/app.constants";
 
 @Component({
     selector:"my-video-component",
@@ -7,20 +8,15 @@ import{YoutubeService} from "../services/youtube.service"
     styleUrls:["./video-page-component.css"]
 })
 export class MyVideoPageComponent {
-    videos = [];
-    videoUrl = "https://www.youtube.com/embed/";
+    videoUrls = [];
 
     constructor(private youtubeService : YoutubeService){
         youtubeService.getAll().subscribe((data)=>{
-                     this.videos = data["items"];
-                     this.videos = this.videos.map((item)=>{
-                    return item.id.videoId;
+                     this.videoUrls = data["items"];
+                     this.videoUrls = this.videoUrls.map((item)=>{
+                    return AppConstants.youtubeUrl+""+item.id.videoId;
                   });
           });
-    }
-
-    getVideoUrl( videoId : string) : any {
-        return this.videoUrl+""+videoId;
     }
     
 }
