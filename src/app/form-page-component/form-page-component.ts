@@ -9,14 +9,16 @@ import { FormService } from '../../app/services/form-services';
     styleUrls:["./form-page-component.css"]
 })
 export class MyFormPageComponennt {
- pdfforms=[];
- Display="hidden";
+    pdfforms=[];
+    constructor(private formService:FormService)
+    {
+     formService.getAll().subscribe
+     (
+        (data)=>
+                {
+                this.pdfforms=data;
+                }
+     )
+    }
 
-constructor(private formService:FormService){
-    this.pdfforms=formService.getAll();
-}
-onPrintClick()
-{
-    this.Display="";
-}
 }

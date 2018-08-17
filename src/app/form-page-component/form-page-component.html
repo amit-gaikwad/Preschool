@@ -1,64 +1,8 @@
 <div class="funnyForm">
- <div class="container" style="background: #e4f0fc;padding-bottom:50px">
-  <h2>Our Form's</h2>
-  <!--
-   <div class="col-md-4 col-sm-4 col-xs-12">
-     <div class="ourForm">
-      <h3>Admission Form</h3>
-       <img src="assets/Admission Forms.png" alt="">
-       <div class="printBtn">
-        <a href="http://www.funnydayschildcare.com.au/images/Funny_Days_Kindergarten-Child _Enrolment form.pdf" target="blank">
-            <button class="btn btn-primary"> Print</button> 
-        </a>   
-      </div>
-     </div>  
-   </div>
-   <div class="col-md-4 col-sm-4 col-xs-12">
-    <div class="ourForm">
-     <h3>Medical Management Plan</h3>
-      <img src="assets/Medical Management Plan.png" alt="">
-      <div class="printBtn">
-       <a href="http://funnydayschildcare.com.au/images/Medical_Management_Plan.pdf" target="blank">
-        <button class="btn btn-primary"> Print</button> 
-       </a>   
-     </div>
-    </div>  
-  </div>
-  <div class="col-md-4 col-sm-4 col-xs-12">
-    <div class="ourForm">
-     <h3>Risk Minimisation Plan Without Asthama    </h3>
-      <img src="assets/Risk minimisation plan without asthama.png" alt="">
-      <div class="printBtn">
-       <a href="http://www.funnydayschildcare.com.au/images/Risk_minimisation_plan_without_asthama.pdf" target="blank">
-        <button class="btn btn-primary"> Print</button> 
-       </a>   
-     </div>
-    </div>  
-  </div>
-  <div class="col-md-4 col-sm-4 col-xs-12">
-    <div class="ourForm">
-     <h3>Risk Minimisation Plan   </h3>
-      <img src="assets/Risk Minimisation Plan.png" alt="">
-      <div class="printBtn">
-       <a href="http://www.funnydayschildcare.com.au/images/Risk_Minimisation_Plan.pdf" target="blank">
-        <button class="btn btn-primary"> Print</button> 
-       </a>   
-     </div>
-    </div>  
-  </div>
-  <div class="col-md-4 col-sm-4 col-xs-12">
-    <div class="ourForm">
-     <h3>Waiting List Application Form</h3>
-      <img src="assets/Waiting List Application form.png" alt="">
-      <div class="printBtn">
-       <a href="http://www.funnydayschildcare.com.au/images/Waiting_List_Application_form.pdf" target="blank">
-         <button class="btn btn-primary"> Print</button>  
-       </a>   
-     </div>
-    </div>  
-  </div> 
-  -->
-  <div class="col-md-4 col-sm-4 col-xs-12" *ngFor="let pdf of pdfforms;let i=index">
+  <div class="container"> 
+    <div class="container2"> 
+     <h2>Our Form's</h2>
+      <div class="col-md-4 col-sm-4 col-xs-12" *ngFor="let pdf of pdfforms;let i=index">
       <div class="ourForm">
         <h3>{{ pdf.name }}</h3>
         <img src= "assets/Waiting List Application form.png" [alt]="pdf.name" />
@@ -88,10 +32,8 @@
                 
               </div>
             </div>
-            
-         
+        </div>
       </div>
-      
   </div>
  </div>
 </div>
