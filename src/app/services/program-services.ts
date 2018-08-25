@@ -1,16 +1,36 @@
-import { Injectable } from "../../../node_modules/@angular/core";
+import { Injectable } from "@angular/core";
+import { Observable } from "rxjs";
+import { map, filter } from "rxjs/operators";
 import { Http ,Response} from "@angular/http";
-import {  Observable } from 'rxjs';
-import { map } from 'rxjs/operators'
+import { AppConstants } from "../constants/app.constants";
+
+
+
 @Injectable()
 export class ProgramServices {
-  
+
     constructor(private http:Http){
+
     }
-    getProgram() : Observable<any> {
-       return this.http.get('http://demo7805012.mockable.io').pipe(
-           map((res:Response) => res.json())
-       );
-       
+
+    getAll():Observable<any>{
+        return this.http.get(AppConstants.eventUrl).pipe(
+            map((res:Response)=>{
+                return res.json();
+            })
+        )
+    }
+
+    getById(id:number):Observable<any>{
+        return this.http.get(AppConstants.eventUrl).pipe(
+            map((res:Response)=>{
+                var event = res.json();
+                event = event.filter((element) =>{
+              return (element.event_id == id);
+                })
+            }))
+             
+        
+        
     }
 }

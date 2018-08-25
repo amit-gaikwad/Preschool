@@ -1,5 +1,6 @@
-import { Component, OnInit } from "../../../node_modules/@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { ProgramServices } from "../services/program-services";
+import { error } from "protractor";
 
 
 @Component({
@@ -9,15 +10,16 @@ import { ProgramServices } from "../services/program-services";
 })
 
 export class MyProgramPageComponent  {
-     private programSer = new Array();
-     private Even = new Array();
-     private Odd  = new Array();
-    constructor(private programServies:ProgramServices){
-        this.programServies.getProgram().subscribe(data => {
-         
-            this.programSer = data;
-          
-        }
-      )
+   programmes = [];
+    
+    constructor(private programmeServices:ProgramServices){
+        programmeServices.getAll().subscribe((data) => {
+            this.programmes = data;
+        });
+        
+        
+
+        
     }
+    
 }

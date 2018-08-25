@@ -43,7 +43,7 @@ const appRoutes: Routes = [
 
 @NgModule({
   declarations: [
-    AppComponent, MyNavbarComponent, MyFooterComponent, MyHomePageComponent,
+    AppComponent, MyNavbarComponent, MyFooterComponent, MyHomePageComponent,MyProgramPageComponent,
     MyAboutPageComponent, MyServicesPageComponent, MyGalleryPageComponent, MyContactPageComponent,
     MyVideoPageComponent, MyFaqPageComponent, 
     MyProgramPageComponent, MyFormPageComponennt, 
