@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { ProgramServices } from "../services/program-services";
 
 @Component ({
    
@@ -7,5 +8,5 @@ import { Component } from "@angular/core";
     styleUrls:["./services-page-component.css"]
 })
 export class MyServicesPageComponent {
-    
+
 }

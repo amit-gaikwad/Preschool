@@ -21,6 +21,9 @@ import { MyFormPageComponennt } from './form-page-component/form-page-component'
 import { MyTestimoniesPageComponent } from './testimonies-page-component/testimonies-page-component';
 import { FormService } from '../app/services/form-services';
 import { SafeUrlPipe } from './pipes/safe-url.pipe';
+import {YoutubeService} from './services/youtube.service';
+import { SafeYoutubeUrlPipe } from './pipes/safe-youtube-url.pipe';
+import { GalleryService } from './services/gallery-service';
 
 
 
@@ -44,15 +47,18 @@ const appRoutes: Routes = [
 
 @NgModule({
   declarations: [
-    SafeUrlPipe,
-    AppComponent, MyNavbarComponent, MyFooterComponent, MyHomePageComponent,
+    AppComponent, MyNavbarComponent, MyFooterComponent, MyHomePageComponent,MyProgramPageComponent,
     MyAboutPageComponent, MyServicesPageComponent, MyGalleryPageComponent, MyContactPageComponent,
-    MyVideoPageComponent, MyFaqPageComponent, MyProgramPageComponent, MyFormPageComponennt, MyTestimoniesPageComponent
+    MyVideoPageComponent, MyFaqPageComponent, 
+    MyProgramPageComponent, MyFormPageComponennt, 
+    MyTestimoniesPageComponent,
+    SafeYoutubeUrlPipe, SafeUrlPipe
    ],
   imports: [
     BrowserModule, FormsModule, HttpModule, RouterModule.forRoot(appRoutes)
   ],
-  providers: [ ProgramServices,FormService],
+  providers: [ ProgramServices,FormService,YoutubeService,GalleryService],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }
