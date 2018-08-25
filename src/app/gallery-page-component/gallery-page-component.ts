@@ -1,12 +1,26 @@
-import { Component } from "@angular/core";
+    import { Component } from "@angular/core";
+    import {  GalleryService } from "../services/gallery-service";
+    @Component({
+        selector:"my-gallery-component",
+        templateUrl:"./gallery-page-component.html",
+        styleUrls:["./gallery-page-component.css","../../assets/css/lightbox.min.css"]
+        
+    })
 
-@Component({
-    selector:"my-gallery-component",
-    templateUrl:"./gallery-page-component.html",
-    styleUrls:["./gallery-page-component.css","../../css/lightbox.min.css"]
-})
-
-export class MyGalleryPageComponent  {
-
-    
-}   
+    export class MyGalleryPageComponent  {
+        
+        gallery = []; 
+        labels =["all","indoor","outdoor","gd","babies","monthlyactivty","specialevent","birhday","schoolreadlines"];
+        selectedcategary = "all";
+        constructor(private galleryservice : GalleryService ){
+        galleryservice.getAll().subscribe((data)=>{
+            this.gallery = data;
+        }); 
+        }
+        oncategarychange(categary : string){
+            this.selectedcategary = categary ;
+            this.galleryservice.getByCategary(this.selectedcategary).subscribe(data=>{
+                this.gallery=data;
+            });
+        }
+    }       
