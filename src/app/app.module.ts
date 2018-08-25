@@ -19,8 +19,11 @@ import { HttpModule } from '../../node_modules/@angular/http';
 import { ProgramServices } from './services/program-services';
 import { MyFormPageComponennt } from './form-page-component/form-page-component';
 import { MyTestimoniesPageComponent } from './testimonies-page-component/testimonies-page-component';
+import { FormService } from '../app/services/form-services';
+import { SafeUrlPipe } from './pipes/safe-url.pipe';
 import {YoutubeService} from './services/youtube.service';
 import { SafeYoutubeUrlPipe } from './pipes/safe-youtube-url.pipe';
+import { GalleryService } from './services/gallery-service';
 
 
 
@@ -36,6 +39,7 @@ const appRoutes: Routes = [
   {path : 'form' , component : MyFormPageComponennt},
   {path : 'faq' , component : MyFaqPageComponent},
   {path : 'testimonies' , component : MyTestimoniesPageComponent},
+  
 
 ];
 
@@ -48,12 +52,13 @@ const appRoutes: Routes = [
     MyVideoPageComponent, MyFaqPageComponent, 
     MyProgramPageComponent, MyFormPageComponennt, 
     MyTestimoniesPageComponent,
-    SafeYoutubeUrlPipe
+    SafeYoutubeUrlPipe, SafeUrlPipe
    ],
   imports: [
     BrowserModule, FormsModule, HttpModule, RouterModule.forRoot(appRoutes)
   ],
-  providers: [ ProgramServices , YoutubeService],
+  providers: [ ProgramServices,FormService,YoutubeService,GalleryService],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }
