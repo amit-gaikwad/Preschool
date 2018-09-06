@@ -5,8 +5,8 @@
  </div>
 <section id="grid-container" class="transitions-enabled fluid masonry js-masonry grid">
     <article *ngFor="let item of gallery">
-        <a [href]="item.url" data-lightbox="gallery" data-title="My caption" > 
-        <img [src] = "item.url" class="img-responsive" /> </a> 
+        <a [href]="item.img_url" data-lightbox="gallery" data-title="My caption" > 
+        <img [src] = "item.img_url" class="img-responsive" /> </a> 
     </article>
 </section><div class="clearfix "></div>
 </div>  

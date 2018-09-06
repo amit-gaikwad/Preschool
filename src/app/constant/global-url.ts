@@ -1,6 +1,6 @@
 
 export class GlobalUrl{
-     static url = "http://localhost:4200/assets/gallary.json" ;
+     static url = "http://54.245.216.148:5000/gallery";
      static labels =["all","indoor","outdoor","gd","babies","monthlyactivty","specialevent","birhday","schoolreadlines"];
 }
 

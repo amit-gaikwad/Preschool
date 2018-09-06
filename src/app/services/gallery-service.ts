@@ -23,9 +23,9 @@ getByCategary(categary : string) : Observable <any>{
     else{
    return this.http.get(this.link).
    pipe(map( (resp : Response)=> {
-    var newData= resp.json();
+    var newData = resp.json();
     var newArray = newData.filter((item)=>{
-        return categary == item.categary;
+        return categary == item.category;
     })
     return newArray;
     }));
