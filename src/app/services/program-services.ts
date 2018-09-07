@@ -8,13 +8,14 @@ import { AppConstants } from "../constants/app.constants";
 
 @Injectable()
 export class ProgramServices {
-
+    eventUrl = '';
     constructor(private http:Http){
+        this.eventUrl = AppConstants.serverUrl+'event';
 
     }
 
     getAll():Observable<any>{
-        return this.http.get(AppConstants.serverUrl+'event').pipe(
+        return this.http.get(this.eventUrl).pipe(
             map((res:Response)=>{
                 return res.json();
             })
@@ -22,7 +23,7 @@ export class ProgramServices {
     }
 
     getById(id:number):Observable<any>{
-        return this.http.get(AppConstants.eventUrl).pipe(
+        return this.http.get(this.eventUrl+'/'+id).pipe(
             map((res:Response)=>{
                 var event = res.json();
                 event = event.filter((element) =>{
