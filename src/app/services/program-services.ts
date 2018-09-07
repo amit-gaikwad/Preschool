@@ -14,7 +14,7 @@ export class ProgramServices {
     }
 
     getAll():Observable<any>{
-        return this.http.get(AppConstants.eventUrl).pipe(
+        return this.http.get(AppConstants.serverUrl+'event').pipe(
             map((res:Response)=>{
                 return res.json();
             })
