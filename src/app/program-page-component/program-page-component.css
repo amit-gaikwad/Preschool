@@ -2,7 +2,7 @@
 .events{
     padding:  150px 0 50px 0;
 	position:relative;
-	z-index: 1;
+	z-index: -1;
 }
 .events:after{
 	content: '';
@@ -10,7 +10,7 @@
     display: block;
     width: 400px;
     height: 197px;
-    position: absolute;
+    position: fixed;
     right: 0%;
     top: 0%;
     z-index: -1;
@@ -28,7 +28,9 @@
 .eventList{
 	width:45%;
 	margin:0 auto;
-	position:relative;
+    position:relative;
+    margin-top: 10px;
+    
 }
 .eventStep1{
 	position: absolute;

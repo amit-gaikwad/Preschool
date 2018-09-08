@@ -10,17 +10,17 @@
     export class MyGalleryPageComponent  {
         
         gallery = []; 
-        labels =["all","indoor","outdoor","gd","babies","monthlyactivty","specialevent","birhday","schoolreadlines"];
+        labels = ["all","indoor","outdoor","gd","babies","monthlyactivty","specialevent","birhday","schoolreadlines"];
         selectedcategary = "all";
         constructor(private galleryservice : GalleryService ){
-        galleryservice.getAll().subscribe((data)=>{
+        galleryservice.getAll().subscribe((data)=> {
             this.gallery = data;
         }); 
         }
         oncategarychange(categary : string){
             this.selectedcategary = categary ;
-            this.galleryservice.getByCategary(this.selectedcategary).subscribe(data=>{
-                this.gallery=data;
+            this.galleryservice.getByCategary(this.selectedcategary).subscribe(data=> {
+                this.gallery = data;
             });
         }
     }       

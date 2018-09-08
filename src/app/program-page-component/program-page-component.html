@@ -1,29 +1,29 @@
 <!-- events -->
 <div id="events" class="events">
 		<div class="container">
-			<h2 class="eventsTitle">Our Program</h2> 
+			<h2 class="eventsTitle">Our Program's</h2> 
 			
 				<div *ngFor="let item of programmes ; let i = index;" class="eventList">
 				
                     <div *ngIf ='i%2 == 0; else otherblock'>
 						
-				<img [src] = "item.imageurl"  alt=" " class="img-responsive" /> 
+				<img [src] = "item.imgurl"  alt=" " class="img-responsive" /> 
 					 <div class="eventStep1 eventInfo">
 						 
-						<h5> {{ item.title}}</h5>
-						<h4>{{ item.description}}</h4>
-						<p>{{ item.date | date}}</p>
+						<h5>{{ item?.title}}</h5>
+						<h4>{{ item?.description}}</h4>
+						<p>{{ item?.date | date}}</p>
 					 </div>
 				  </div>
 
 				  <div>
 					  <ng-template #otherblock>
-						<img [src] ='item.imageurl' alt=" " class="img-responsive" />
+						<img [src] ='item.imgurl' alt=" " class="img-responsive" />
 						 <div class="eventStep eventInfo">
 							 
-							<h5> {{ item.title}}</h5>
-							<h4>{{ item.description}}</h4>
-							<p>{{ item.date | date}}
+							<h5> {{ item?.title}}</h5>
+							<h4>{{ item?.description}}</h4>
+							<p>{{ item?.date | date}}
 							</p>
 						 </div>
 						</ng-template>
