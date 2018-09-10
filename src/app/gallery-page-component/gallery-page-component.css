@@ -107,4 +107,6 @@ p {
   {
     padding: 10px;
   }
- 
+  .btnPadding {
+    padding: 8px;
+}
