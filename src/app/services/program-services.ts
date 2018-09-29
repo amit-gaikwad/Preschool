@@ -11,7 +11,6 @@ export class ProgramServices {
     eventUrl = '';
     constructor(private http:Http){
         this.eventUrl = AppConstants.serverUrl+'event';
-
     }
 
     getAll():Observable<any>{
