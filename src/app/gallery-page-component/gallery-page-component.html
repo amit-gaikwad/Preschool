@@ -1,7 +1,7 @@
  <div class="gallery">
 <div class="button-group filters-button-group ">
-    <button *ngFor="let item of labels" class="button btnPadding" [class.is-checked]="item==selectedcategary" (click)="oncategarychange(item)">
-        {{item |uppercase}}</button>
+    <!-- <button *ngFor="let item of labels" class="button btnPadding" [class.is-checked]="item==selectedcategary" (click)="oncategarychange(item)">
+        {{item |uppercase}}</button> -->
  </div>
 <section id="grid-container" class="transitions-enabled fluid masonry js-masonry grid">
     <article *ngFor="let item of gallery">
