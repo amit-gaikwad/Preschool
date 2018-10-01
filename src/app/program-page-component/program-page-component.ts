@@ -15,6 +15,7 @@ export class MyProgramPageComponent  {
     constructor(private programmeServices:ProgramServices){
         programmeServices.getAll().subscribe((data) => {
             this.programmes = data;
+            console.log(data);
         });
         
         
