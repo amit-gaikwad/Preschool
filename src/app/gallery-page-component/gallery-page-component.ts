@@ -18,7 +18,7 @@
         { "img_url":"./assets/img6.jpg"}   
     ]; 
 
-        labels = ["all","indoor","outdoor","gd","babies","monthlyactivty","specialevent","birhday","schoolreadlines"];
+       labels = ["All","Indoor","Outdoor","Group Activity","Babies","Monthly Activity","Special Event","Birthday","School Readiness"];
         selectedcategary = "all";
         constructor(private galleryservice : GalleryService ){
         galleryservice.getAll().subscribe((data)=> {
