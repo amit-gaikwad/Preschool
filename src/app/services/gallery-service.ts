@@ -19,7 +19,7 @@ pipe(map((res:Response)=>{
 }
 
 getByCategary(categary : string) : Observable <any>{
-    if(categary == 'all'){
+    if(categary == 'All'){
         return this.getAll();
         }
     else{

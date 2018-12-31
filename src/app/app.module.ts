@@ -28,9 +28,8 @@ import { GalleryService } from './services/gallery-service';
 
 
 const appRoutes: Routes = [
-
+  {path : '' , redirectTo: '/home',pathMatch:'full' },
   {path : 'home' , component : MyHomePageComponent},
-  // {path : '' , redirectTo: '/home',pathMatch:'full' },
   {path : 'about' , component : MyAboutPageComponent},
   {path : 'services' , component : MyServicesPageComponent},
   {path : 'gallery' , component : MyGalleryPageComponent},
